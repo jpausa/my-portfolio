@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
 
 interface Props {
-  primary?: boolean;
-  size?: "small" | "large";
-  label?: string;
+  primary?: boolean
+  size?: "small" | "large"
+  label?: string
 }
- 
+
 export const Button = ({
   primary = false,
   label = "Boop",
@@ -22,5 +22,5 @@ export const Button = ({
     >
       {label}
     </button>
-  );
-};
+  )
+}

@@ -4,9 +4,7 @@ module.exports = {
     "next",
     "turbo",
     "prettier",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended",
+    "eslint:recommended"
   ],
   rules: {
     "@next/next/no-html-link-for-pages": "off",
