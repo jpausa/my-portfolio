@@ -1,19 +1,18 @@
 module.exports = {
   env: { browser: true, es2020: true },
   extends: [
-    "next",
-    "turbo",
-    "prettier",
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
   ],
-  rules: {
-    "@next/next/no-html-link-for-pages": "off",
-    semi: ["error", "never"]
-  },
+  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
+  rules: {
+    "react-refresh/only-export-components": [
+      "warn",
+      { allowConstantExport: true },
+    ],
+    semi: ["error", "never"],
   },
 }
