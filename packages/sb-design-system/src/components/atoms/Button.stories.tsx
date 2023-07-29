@@ -1,5 +1,4 @@
 import { Button } from "./Button"
-
 import type { Meta, StoryObj } from "@storybook/react"
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
@@ -16,19 +15,5 @@ type Story = StoryObj<typeof meta>
 // More on writing stories with args: https://storybook.js.org/docs/7.0/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    title: "primary",
-    label: "Button",
-    actionType: "self",
-    actionUrl: "#",
-    isPrimary: true,
-  },
-}
-
-export const Secondary: Story = {
-  args: {
-    title: "secondary",
-    label: "Button",
-    actionType: "self",
-    actionUrl: "#",
   },
 }
