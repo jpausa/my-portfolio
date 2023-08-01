@@ -14,7 +14,7 @@ const getColorFromVariant = (variant: AtButtonVariants) => {
         : 'text-purple-500 border-purple-500 hover:shadow-purple-500'
 }
 
-export const Button = ({ variant = 'green', text, url }: AtButtonProps) => {
+export const AtButton = ({ variant = 'green', text, url }: AtButtonProps) => {
     return (
         <a
             type='button'

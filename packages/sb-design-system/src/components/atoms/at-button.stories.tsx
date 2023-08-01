@@ -1,12 +1,12 @@
-import { Button } from './at-button'
+import { AtButton } from './at-button'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
     title: 'Atoms/at-button',
-    component: Button,
+    component: AtButton,
     tags: ['autodocs'],
     argTypes: {},
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof AtButton>
 
 export default meta
 type Story = StoryObj<typeof meta>
