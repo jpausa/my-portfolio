@@ -14,6 +14,6 @@ module.exports = {
       { allowConstantExport: true },
     ],
     semi: ["error", "never"],
-    "max-len": ["error", { "code": 80 }]
+    "max-len": ["error", { "code": 120 }]
   },
 }
