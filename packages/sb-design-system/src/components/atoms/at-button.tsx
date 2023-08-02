@@ -20,9 +20,9 @@ export const AtButton = ({ variant = 'green', text, url }: AtButtonProps) => {
       type='button'
       after-dynamic-value={text}
       className={cn(
-        'font-extralight text-xl max-w-full h-full px-12 py-4 \
-                 bg-neutral-800 rounded-md border-2 flex-row justify-center \
-                 items-center gap-3.5 inline-flex hover:shadow-lg',
+        'inline-flex h-full max-w-full flex-row items-center \
+        justify-center gap-3.5 rounded-md border-2 bg-neutral-800 \
+        px-12 py-4 text-xl font-extralight hover:shadow-lg',
         getColorFromVariant(variant),
       )}
       href={url}
