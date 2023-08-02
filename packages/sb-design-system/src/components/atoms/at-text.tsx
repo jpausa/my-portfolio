@@ -7,7 +7,7 @@ export interface AtTextProps {
 
 export const AtText = ({ children }: AtTextProps) => {
   return (
-    <p className={cn('text-slate-100 bg-transparent text-xl font-extralight leading-7')}>
+    <p className={cn('bg-transparent text-xl font-extralight leading-7 text-slate-100')}>
       {children}
     </p>
   )

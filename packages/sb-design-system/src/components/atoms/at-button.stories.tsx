@@ -7,7 +7,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {},
   parameters: {
-    layout: "centered"
+    layout: 'centered',
   },
 } satisfies Meta<typeof AtButton>
 
