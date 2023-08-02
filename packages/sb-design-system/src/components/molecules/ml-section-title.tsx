@@ -1,17 +1,28 @@
-import { ReactNode } from 'react'
 import { cn } from '../../lib/cn'
-import { AtSpan } from '../atoms/at-span'
+import { AtSpan, AtSpanColorVariants } from '../atoms/at-span'
 
 export interface MlSectionTitleProps {
-  children: ReactNode
+  className?: string
+  spanColor?: AtSpanColorVariants
+  beginingSpan?: string
+  endSpan?: string
+  text: string
 }
 
-export const MlSectionTitle = ({ children }: MlSectionTitleProps) => {
+export const MlSectionTitle = ({
+  className,
+  spanColor,
+  beginingSpan,
+  endSpan,
+  text,
+}: MlSectionTitleProps) => {
   return (
-    <div className='flex flex-row text-5xl font-medium tracking-wider'>
-      <AtSpan text='<' />
-      <h1 className={cn('text-slate-100')}>{children}</h1>
-      <AtSpan text='>' />
+    <div className={cn('flex text-5xl font-medium tracking-wider', className)}>
+      <h1 className={cn('whitespace-pre-wrap text-slate-100')}>
+        {beginingSpan && <AtSpan variant={spanColor} text={beginingSpan} />}
+        {text}
+        {endSpan && <AtSpan variant={spanColor} text={endSpan} />}
+      </h1>
     </div>
   )
 }

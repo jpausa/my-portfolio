@@ -21,8 +21,19 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {
+export const WithTwoSpanItems: Story = {
   args: {
-    children: 'Projects',
+    beginingSpan: '<',
+    endSpan: '>',
+    text: 'Projects',
+  },
+}
+
+export const WithSingleSpanItem: Story = {
+  args: {
+    className: 'text-8xl',
+    spanColor: 'purple',
+    endSpan: '.',
+    text: `Hi,\nI’m Yaroslav`,
   },
 }
