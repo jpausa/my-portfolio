@@ -52,13 +52,15 @@ export const AtTag = ({ text, textColor, tagColor, image }: AtTagProps) => {
     <div
       className={cn(
         getStylesFromVariant(tagColor, 'bg'),
-        'flex items-center justify-center gap-4 rounded-md px-7 py-3.5',
+        'inline-flex flex-col items-center justify-center rounded-md border px-4 py-2',
       )}
     >
-      {image && <AtImage src={image.src} altText={image.altText} />}
-      <span className={cn(getStylesFromVariant(textColor, 'text'), 'text-2xl font-semibold')}>
-        {text}
-      </span>
+      <div className={cn('inline-flex items-center justify-center gap-4', !image && 'p-2' )}>
+        {image && <AtImage src={image.src} altText={image.altText} />}
+        <span className={cn(getStylesFromVariant(textColor, 'text'), 'text-2xl font-semibold')}>
+          {text}
+        </span>
+      </div>
     </div>
   )
 }
