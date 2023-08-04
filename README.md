@@ -1,14 +1,6 @@
-# Turborepo starter
+# My personal Portfolio project
 
-This is an official starter Turborepo.
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
+This is my personal portfolio repo builded using Turborepo.
 
 ## What's inside?
 
@@ -16,17 +8,15 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `web`: a [React.js](https://react.dev/) app
+- `sb-design-system`: a design system app using React and Storybook shared by `web` application
+- `eslint-config-custom`: `eslint` configurations
+- `tailwind-config`: `tailwind` configurations used throughout the monorepo React apps
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
-This Turborepo has some additional tools already setup for you:
+This Turborepo has some additional tools already setup:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
