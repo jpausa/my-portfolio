@@ -52,7 +52,7 @@ export const AtTag = ({ text, textColor, tagColor, image }: AtTagProps) => {
     <div
       className={cn(
         getStylesFromVariant(tagColor, 'bg'),
-        'inline-flex flex-col items-center justify-center rounded-md border px-4 py-2',
+        'inline-flex flex-col items-center justify-center rounded-md border-0 px-4 py-2',
       )}
     >
       <div className={cn('inline-flex items-center justify-center gap-4', !image && 'p-2')}>
