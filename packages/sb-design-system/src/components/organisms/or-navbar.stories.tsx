@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>
 
 export const Defaut: Story = {
   args: {
-    headImg: { altText: 'sample img', src: 'https://via.placeholder.com/115x150' },
+    headImg: { altText: 'sample img', asset: 'https://via.placeholder.com/115x150' },
     navItems: [
       { url: '#', label: 'Projects', variant: 'navigation' },
       { url: '#', label: 'Skills', variant: 'navigation' },

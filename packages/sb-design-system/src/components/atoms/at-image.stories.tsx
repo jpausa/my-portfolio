@@ -24,6 +24,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     altText: 'a test image of a guy',
-    src: 'https://via.placeholder.com/467x622',
+    asset: { file: { url: 'https://via.placeholder.com/467x622' } },
+    hasBorder: true
   },
 }

@@ -20,28 +20,28 @@ export const Default: Story = {
     tagColor: 'green-400',
     textColor: 'slate-100',
     image: {
-      src: 'https://img.icons8.com/color/48/nodejs.png',
-      altText: 'nodejs logo'
+      asset: { file: { url: 'https://img.icons8.com/color/48/nodejs.png' } },
+      altText: 'nodejs logo',
     },
   },
 }
 
 export const GradientNoIcon: Story = {
-    args: {
-      text: '#progressiveWebApp',
-      tagColor: 'gradients',
-      textColor: 'slate-100',
-    },
-  }
+  args: {
+    text: '#progressiveWebApp',
+    tagColor: 'gradients',
+    textColor: 'slate-100',
+  },
+}
 
-  export const ReactNative: Story = {
-    args: {
-      text: '#react-native',
-      tagColor: 'neutral-800',
-      textColor: 'sky-400',
-      image: {
-        src: 'https://img.icons8.com/color/48/react-native.png',
-        altText: 'nodejs logo'
-      },
+export const ReactNative: Story = {
+  args: {
+    text: '#react-native',
+    tagColor: 'neutral-800',
+    textColor: 'sky-400',
+    image: {
+      asset: { file: { url: 'https://img.icons8.com/color/48/react-native.png' } },
+      altText: 'nodejs logo',
     },
-  }
+  },
+}
