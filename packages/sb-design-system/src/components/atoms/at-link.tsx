@@ -1,7 +1,35 @@
 import { ReactNode } from 'react'
 import { cn } from '../../lib/cn'
+import { IconApple } from '../icons/ic-apple'
+import { IconFacebook } from '../icons/ic-facebook'
+import { IconInstagram } from '../icons/ic-instagram'
+import { IconLinkedin } from '../icons/ic-linkedin'
+import { IconTwitter } from '../icons/ic-twitter'
+import { IconYoutube } from '../icons/ic-youtube'
+import { IconGithub } from '../icons/ic-github'
 
 export type AtLinkVariants = 'default' | 'green' | 'purple' | 'navigation' | 'social'
+
+export type AtLinkSocialVariants =
+  | 'facebook'
+  | 'twitter'
+  | 'youtube'
+  | 'linkedin'
+  | 'instagram'
+  | 'itunes'
+  | 'github'
+
+const socialIconCNs = 'w-7 h-7'
+
+const socialIcon: Record<AtLinkSocialVariants, JSX.Element> = {
+  itunes: <IconApple className={socialIconCNs} />,
+  facebook: <IconFacebook className={socialIconCNs} />,
+  instagram: <IconInstagram className={socialIconCNs} />,
+  linkedin: <IconLinkedin className={socialIconCNs} />,
+  twitter: <IconTwitter className={socialIconCNs} />,
+  youtube: <IconYoutube className={socialIconCNs} />,
+  github: <IconGithub className={socialIconCNs} />,
+}
 
 const getStyleFromVariant = (variant: AtLinkVariants) => {
   const stylesMap = {
@@ -16,6 +44,7 @@ const getStyleFromVariant = (variant: AtLinkVariants) => {
 
 export interface AtLinkProps {
   variant?: AtLinkVariants
+  socialVariant?: AtLinkSocialVariants
   className?: string
   url: string
   icon?: ReactNode
@@ -26,6 +55,7 @@ export interface AtLinkProps {
 
 export const AtLink = ({
   variant = 'default',
+  socialVariant,
   className,
   url,
   icon,
@@ -40,7 +70,7 @@ export const AtLink = ({
       onFocus={onFocus}
       onBlur={onBlur}
     >
-      {icon && icon}
+      {(icon && icon) || (socialVariant && socialIcon[socialVariant!])}
       {label && label}
     </a>
   )

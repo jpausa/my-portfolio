@@ -1,22 +1,11 @@
-import { ReactNode } from 'react'
 import { cn } from '../../lib/cn'
 import { AtImage, AtImageProps } from '../atoms/at-image'
 import { AtLink, AtLinkProps } from '../atoms/at-link'
-import { IconGithub } from '../icons/at-icon-github'
-import { IconLinkedin } from '../icons/at-icon-linkedin'
 
 export interface OrNavBarProps {
   headImg: AtImageProps
   navItems: AtLinkProps[]
   socialItems: AtLinkProps[]
-}
-
-const getSocialIconFromLabel = (label: string) => {
-  const iconMap: Record<string, ReactNode> = {
-    linkedin: <IconLinkedin className='h-7 w-7' />,
-    github: <IconGithub className='h-7 w-7' />,
-  }
-  return iconMap[label.toLowerCase()]
 }
 
 export const OrNavBar = ({ headImg, navItems, socialItems }: OrNavBarProps) => {
@@ -43,7 +32,7 @@ export const OrNavBar = ({ headImg, navItems, socialItems }: OrNavBarProps) => {
           <AtLink
             {...links}
             variant='social'
-            icon={getSocialIconFromLabel(links.label)}
+            socialVariant={links.socialVariant}
             className='py-2'
           />
         ))}

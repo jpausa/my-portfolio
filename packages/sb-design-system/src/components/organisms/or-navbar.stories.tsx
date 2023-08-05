@@ -24,8 +24,8 @@ export const Defaut: Story = {
       { url: '#', label: 'Contact', variant: 'navigation' },
     ],
     socialItems: [
-      { url: '#', label: 'LinkedIn', variant: 'social' },
-      { url: '#', label: 'Github', variant: 'social' },
+      { url: '#', label: 'LinkedIn', variant: 'social', socialVariant: 'linkedin' },
+      { url: '#', label: 'Github', variant: 'social', socialVariant: 'github' },
     ],
   },
 }

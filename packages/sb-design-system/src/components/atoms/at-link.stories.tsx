@@ -1,8 +1,6 @@
-
-import { IconLinkedin } from '../icons/at-icon-linkedin'
+import { IconYoutube } from '../icons/ic-youtube'
 import { AtLink } from './at-link'
 import type { Meta, StoryObj } from '@storybook/react'
-
 
 const meta = {
   title: 'Atoms/at-link',
@@ -27,8 +25,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     url: '#',
-    label:
-      'learning management system',
+    label: 'learning management system',
   },
 }
 
@@ -36,8 +33,7 @@ export const Green: Story = {
   args: {
     variant: 'green',
     url: '#',
-    label:
-      'Read more ...',
+    label: 'Read more ...',
   },
 }
 
@@ -45,8 +41,7 @@ export const Purple: Story = {
   args: {
     variant: 'purple',
     url: '#',
-    label:
-      'Read more ...',
+    label: 'Read more ...',
   },
 }
 
@@ -54,17 +49,24 @@ export const Navigation: Story = {
   args: {
     variant: 'navigation',
     url: '#',
-    label:
-      'Projects',
+    label: 'Projects',
+  },
+}
+
+export const Icon: Story = {
+  args: {
+    variant: 'navigation',
+    icon: <IconYoutube className='h-7 w-7' />,
+    url: '#',
+    label: 'another link with icon',
   },
 }
 
 export const Social: Story = {
   args: {
     variant: 'social',
+    socialVariant: 'linkedin',
     url: '#',
-    icon: <IconLinkedin className='w-7 h-7'/>,
-    label:
-      'LinkedIn',
+    label: 'LinkedIn',
   },
 }
